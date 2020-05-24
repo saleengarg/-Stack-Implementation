@@ -1,0 +1,32 @@
+class Stack:          #LIFO Structure
+    def __init__(self):
+        self.Stack=[]
+    def isempty(self):
+        return self.Stack==[]
+    def push(self,data):     		#This method is use to add an item in a stack
+        self.Stack.append(data)
+    def pop(self):                    	#This method remove the top most item from a stack and return it.
+        data=self.Stack[-1]
+        del self.Stack[-1]
+        return data
+    def peek(self):			#This method return the top most item from a stack without removing it.
+        return self.Stack[-1]
+    def size(self):			#This method return the size of stack
+        return len(self.Stack)
+
+stack=Stack()
+stack.push(1)
+stack.push(2)
+stack.push(3)
+stack.push(4)
+stack.push(5)
+print(stack.pop())
+print(stack.peek())
+print(stack.size())
+
+
+
+#OUTPUT
+#5
+#4
+#4
